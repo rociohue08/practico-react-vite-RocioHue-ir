@@ -1,0 +1,74 @@
+
+/*todo lo que se ve en la pantalla esta en el index.html por eso aca llamo al id root 
+y le doy las medidas por defecto venia todo centrado y no podia darle un ancho a mi pagina*/
+
+
+#root {
+  width: 100%;
+  max-width: 1200px;/*1280px // Pero no se expandirá más allá de 1200px */
+  margin: 0 auto;/* Centra el contenedor horizontalmente */
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav {
+  background:#ff00ff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+footer{
+  background-color: #00bfff;
+}
+
+.menu {
+  display: inline-flex;
+  justify-content: space-between; /* Distribuye el espacio igualmente entre los elementos */
+  width: 80%; /* definir el ancho del contenerdor que contiene la palabra(h2)*/
+ color: yellow;
+}
+
+
+.content {
+  /*en app main y asside estan contenidos por un div con clase "content"*/
+  display: flex; /*le digo al contener que se aflexible*/
+  justify-content: space-between; /* Distribuye el espacio igualmente entre los elementos */
+  gap:10px;
+  /*gap: 20px;*/
+  padding-bottom: 10px;
+padding-top: 10px;
+}
+
+/*La propiedad flex se aplica a los elementos hijos de un contenedor flex. 
+Al establecer flex: 1; en un elemento hijo, por ejemplo, ese elemento ocupará 
+todo el espacio disponible dentro del contenedor flex después de que se hayan 
+asignado los tamaños de los elementos con anchos específicos o tamaños mínimos.*/
+
+main {
+  flex: 5;  /*el elemento ocupa el espacio desponible dentro del contenedo
+  despues de haberle asignado los tamaños de los elementos*/
+  background:#ffa500;
+  color:white;
+}
+
+aside {
+  flex: 3;
+  background:#6a5acd;
+  color: white;
+
+}
+
+aside p{
+  color:white;
+  text-align: center;
+  font-weight: bold;
+}
